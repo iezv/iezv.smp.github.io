@@ -1,0 +1,123 @@
+img {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+}
+
+body{
+ background: #83DAED;
+}
+
+.btn-primary {
+  color: #ffffff;
+  background-color:  #012931;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  font-weight: 200 !important;
+  letter-spacing: 0em !important;
+  border-radius: 0;
+  width: 120px;
+}
+
+.butt{
+  font-size: 14px !important;
+  text-decoration: none !important;
+  letter-spacing: 0em !important;
+}
+
+.form-control{
+  background: #D5E6ED; 
+  border-radius: 0;
+}
+
+/*LOGIN PAGE*/
+
+.login {
+  background-image: url(../images/backdrLogin.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #012931;
+  line-height: 1.471;
+}
+
+.login_content {
+  margin-top: 60px;
+  margin-bottom: auto;
+  position: relative;
+  text-align: center;
+  text-shadow: 0 0px 0 #ffffff;
+  min-width: 230px; 
+}
+
+@media (max-width: 991px) {
+  .login{
+   background-image: block;
+   background: #83DAED;
+ }
+ .login_content {
+  margin-top: 30px;
+  margin-bottom: auto;
+}
+}
+
+.login_content h1 {
+  color: #012931;
+  letter-spacing: 0em;
+  line-height: 20px;
+}
+
+.login_content h1:before {
+  background: #012931;
+  height: 2px;
+}
+
+.login_content h1:after {
+  background: #012931;
+  height: 2px;
+}
+.separator {
+  border-top: 2px solid #012931;
+  margin-top: 10px;
+  padding-top: 10px; 
+}
+.login_content form input[type="text"], .login_content form input[type="email"], .login_content form input[type="password"] {
+  border-radius: 0;
+  -ms-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+  -o-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+  box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+  border: 1px solid #012931;
+  color: #777;
+  margin: 0 0 20px;
+  width: 100%;
+}
+.reset_pass,
+.to_register {
+  color: #012931 !important;
+  font-size: 16px !important;
+}
+
+.change_link{
+  color: #012931;
+  font-size: 16px;
+}
+.registration_form, .login_form {
+  width: 100%; 
+}
+
+
+/*HOME PAGE*/
+/*NAVIGATION*/
+
+.left_col {
+  background: #012931; 
+}
+
