@@ -40,7 +40,7 @@ if(!isset($_SESSION['username']) && (!isset($_SESSION['password']))) {
       <div class="col-md-3 left_col">
         <div class="left_col scroll-view">
           <div class="navbar nav_title" style="border: 0;">
-            <a href="index.html" class="site_title"><i class="fa fa-gg"></i> <span>Your logo</span></a>
+            <a href="index.php" class="site_title"><i class="fa fa-gg"></i> <span>Your logo</span></a>
           </div>
 
           <div class="clearfix"></div>
@@ -55,8 +55,6 @@ if(!isset($_SESSION['username']) && (!isset($_SESSION['password']))) {
             </div>
           </div>
           <!-- /menu profile quick info -->
-
-          <br />
 
           <!-- sidebar menu -->
           <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
@@ -206,48 +204,306 @@ if(!isset($_SESSION['username']) && (!isset($_SESSION['password']))) {
       </div>
       <!-- /top navigation -->
       <div class="conteiner-fluid">
-      <div class="row">
-         <div class="col-lg-6 text-center">ПОЛЕ № 1</div>
-         <div class="col-lg-6 text-center">ПОЛЕ № 2</div>
-       </div>
-     </div>
-   </div>
- </div>
+        <div class="right_col" role="main">
+          <div class="row">
+           <!-- page content -->
+           <div class="col-md-5">
+             <div class="page-title">
 
- <!-- jQuery -->
- <script src="vendors/jquery/dist/jquery.min.js"></script>
- <!-- Bootstrap -->
- <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
- <!-- FastClick -->
- <script src="vendors/fastclick/lib/fastclick.js"></script>
- <!-- NProgress -->
- <script src="vendors/nprogress/nprogress.js"></script>
- <!-- Chart.js -->
- <script src="vendors/Chart.js/dist/Chart.min.js"></script>
- <!-- jQuery Sparklines -->
- <script src="vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
- <!-- Flot -->
- <script src="vendors/Flot/jquery.flot.js"></script>
- <script src="vendors/Flot/jquery.flot.pie.js"></script>
- <script src="vendors/Flot/jquery.flot.time.js"></script>
- <script src="vendors/Flot/jquery.flot.stack.js"></script>
- <script src="vendors/Flot/jquery.flot.resize.js"></script>
- <!-- Flot plugins -->
- <script src="vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
- <script src="vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
- <script src="vendors/flot.curvedlines/curvedLines.js"></script>
- <!-- DateJS -->
- <script src="vendors/DateJS/build/date.js"></script>
- <!-- bootstrap-daterangepicker -->
- <script src="vendors/moment/min/moment.min.js"></script>
- <script src="vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+              <!-- Inbox massages -->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="x_panel">
+                    <div class="x_title">
+                      <h2>Inbox Design<small>User Mail</small></h2>
+                      <ul class="nav navbar-right panel_toolbox">
+                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Settings 1</a>
+                            </li>
+                            <li><a href="#">Settings 2</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+                        </li>
+                      </ul>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                      <div class="row">
+                        <div class="col-sm-12 mail_list_column">
+                         <a href="#">
+                          <div class="mail_list">
+                            <div class="left">
+                              <i class="fa fa-circle"></i> <i class="fa fa-edit"></i>
+                            </div>
+                            <div class="right">
+                              <h3>Dennis Mugo <small>3.00 PM</small></h3>
+                              <p>Ut enim ad minim veniam, quis nostrud exercitation enim ad minim veniam, quis nostrud exercitation...</p>
+                            </div>
+                          </div>
+                        </a>
+                        <a href="#">
+                          <div class="mail_list">
+                            <div class="left">
+                              <i class="fa fa-star"></i>
+                            </div>
+                            <div class="right">
+                              <h3>Jane Nobert <small>4.09 PM</small></h3>
+                              <p><span class="badge">To</span> Ut enim ad minim veniam, quis nostrud exercitation enim ad minim veniam, quis nostrud exercitation...</p>
+                            </div>
+                          </div>
+                        </a>
+                        <a href="#">
+                          <div class="mail_list">
+                            <div class="left">
+                              <i class="fa fa-circle-o"></i><i class="fa fa-paperclip"></i>
+                            </div>
+                            <div class="right">
+                              <h3>Musimbi Anne <small>4.09 PM</small></h3>
+                              <p><span class="badge">CC</span> Ut enim ad minim veniam, quis nostrud exercitation enim ad minim veniam, quis nostrud exercitation...</p>
+                            </div>
+                          </div>
+                        </a>
+                        <a href="#">
+                          <div class="mail_list">
+                            <div class="left">
+                              <i class="fa fa-paperclip"></i>
+                            </div>
+                            <div class="right">
+                              <h3>Jon Dibbs <small>4.09 PM</small></h3>
+                              <p>Ut enim ad minim veniam, quis nostrud exercitation enim ad minim veniam, quis nostrud exercitation...</p>
+                            </div>
+                          </div>
+                        </a>
+                        <a href="#">
+                          <div class="mail_list">
+                            <div class="left">
+                              .
+                            </div>
+                            <div class="right">
+                              <h3>Debbis & Raymond <small>4.09 PM</small></h3>
+                              <p>Ut enim ad minim veniam, quis nostrud exercitation enim ad minim veniam, quis nostrud exercitation...</p>
+                            </div>
+                          </div>
+                        </a>
+                        <a href="#">
+                          <div class="mail_list">
+                            <div class="left">
+                              .
+                            </div>
+                            <div class="right">
+                              <h3>Debbis & Raymond <small>4.09 PM</small></h3>
+                              <p>Ut enim ad minim veniam, quis nostrud exercitation enim ad minim veniam, quis nostrud exercitation...</p>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <!-- /MAIL LIST -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
- <!-- Custom Theme Scripts -->
- <script src="build/js/custom.min.js"></script>
+        <div class="col-md-5 mail_view">
+         <!-- CONTENT MAIL -->
+         <div class="inbox-body">
+          <div class="mail_heading row">
+            <div class="col-md-8">
+              <div class="btn-group">
+                <button class="btn btn-sm btn-primary" type="button"><i class="fa fa-reply"></i> Reply</button>
+                <button class="btn btn-sm btn-default" type="button"  data-placement="top" data-toggle="tooltip" data-original-title="Forward"><i class="fa fa-share"></i></button>
+                <button class="btn btn-sm btn-default" type="button" data-placement="top" data-toggle="tooltip" data-original-title="Print"><i class="fa fa-print"></i></button>
+                <button class="btn btn-sm btn-default" type="button" data-placement="top" data-toggle="tooltip" data-original-title="Trash"><i class="fa fa-trash-o"></i></button>
+              </div>
+            </div>
+            <div class="col-md-4 text-right">
+              <p class="date"> 8:02 PM 12 FEB 2014</p>
+            </div>
+            <div class="col-md-12">
+              <h4> Donec vitae leo at sem lobortis porttitor eu consequat risus. Mauris sed congue orci. Donec ultrices faucibus rutrum.</h4>
+            </div>
+          </div>
+          <div class="sender-info">
+            <div class="row">
+              <div class="col-md-12">
+                <strong>Jon Doe</strong>
+                <span>(jon.doe@gmail.com)</span> to
+                <strong>me</strong>
+                <a class="sender-dropdown"><i class="fa fa-chevron-down"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="view-mail">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            </div>
+            <div class="attachment">
+              <p>
+                <span><i class="fa fa-paperclip"></i> 3 attachments — </span>
+                <a href="#">Download all attachments</a> |
+                <a href="#">View all images</a>
+              </p>
+              <ul>
+                <li>
+                  <a href="#" class="atch-thumb">
+                    <img src="images/inbox.png" alt="img" />
+                  </a>
+                  <div class="file-name">
+                    image-name.jpg
+                  </div>
+                  <span>12KB</span>
+                  <div class="links">
+                    <a href="#">View</a> -
+                    <a href="#">Download</a>
+                  </div>
+                </li>
 
- <!-- Custom My Scripts -->
- <script src="js/myscript.js"></script>
+                <li>
+                  <a href="#" class="atch-thumb">
+                    <img src="images/inbox.png" alt="img" />
+                  </a>
 
- <!-- /bootstrap-daterangepicker -->
+                  <div class="file-name">
+                    img_name.jpg
+                  </div>
+                  <span>40KB</span>
+                  <div class="links">
+                    <a href="#">View</a> -
+                    <a href="#">Download</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /CONTENT MAIL -->
+        </div>
+
+        <div class="col-md-2">
+         <div>
+          <div class="x_title">
+            <h2>Top Profiles</h2>
+            <ul class="nav navbar-right panel_toolbox">
+              <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Settings 1</a>
+                  </li>
+                  <li><a href="#">Settings 2</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a class="close-link"><i class="fa fa-close"></i></a>
+              </li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+          <ul class="list-unstyled top_profiles scroll-view">
+            <li class="media event">
+              <a class="pull-left border-aero profile_thumb">
+                <i class="fa fa-user aero"></i>
+              </a>
+              <div class="media-body">
+                <a class="title" href="#">Ms. Mary Jane</a>
+                <p><strong>$2300. </strong> Agent Avarage Sales </p>
+                <p> <small>12 Sales Today</small>
+                </p>
+              </div>
+            </li>
+            <li class="media event">
+              <a class="pull-left border-green profile_thumb">
+                <i class="fa fa-user green"></i>
+              </a>
+              <div class="media-body">
+                <a class="title" href="#">Ms. Mary Jane</a>
+                <p><strong>$2300. </strong> Agent Avarage Sales </p>
+                <p> <small>12 Sales Today</small>
+                </p>
+              </div>
+            </li>
+            <li class="media event">
+              <a class="pull-left border-blue profile_thumb">
+                <i class="fa fa-user blue"></i>
+              </a>
+              <div class="media-body">
+                <a class="title" href="#">Ms. Mary Jane</a>
+                <p><strong>$2300. </strong> Agent Avarage Sales </p>
+                <p> <small>12 Sales Today</small>
+                </p>
+              </div>
+            </li>
+            <li class="media event">
+              <a class="pull-left border-aero profile_thumb">
+                <i class="fa fa-user aero"></i>
+              </a>
+              <div class="media-body">
+                <a class="title" href="#">Ms. Mary Jane</a>
+                <p><strong>$2300. </strong> Agent Avarage Sales </p>
+                <p> <small>12 Sales Today</small>
+                </p>
+              </div>
+            </li>
+            <li class="media event">
+              <a class="pull-left border-green profile_thumb">
+                <i class="fa fa-user green"></i>
+              </a>
+              <div class="media-body">
+                <a class="title" href="#">Ms. Mary Jane</a>
+                <p><strong>$2300. </strong> Agent Avarage Sales </p>
+                <p> <small>12 Sales Today</small>
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </div>
+  <!-- jQuery -->
+  <script src="vendors/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- FastClick -->
+  <script src="vendors/fastclick/lib/fastclick.js"></script>
+  <!-- NProgress -->
+  <script src="vendors/nprogress/nprogress.js"></script>
+  <!-- Chart.js -->
+  <script src="vendors/Chart.js/dist/Chart.min.js"></script>
+  <!-- jQuery Sparklines -->
+  <script src="vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+  <!-- Flot -->
+  <script src="vendors/Flot/jquery.flot.js"></script>
+  <script src="vendors/Flot/jquery.flot.pie.js"></script>
+  <script src="vendors/Flot/jquery.flot.time.js"></script>
+  <script src="vendors/Flot/jquery.flot.stack.js"></script>
+  <script src="vendors/Flot/jquery.flot.resize.js"></script>
+  <!-- Flot plugins -->
+  <script src="vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+  <script src="vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+  <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+  <!-- DateJS -->
+  <script src="vendors/DateJS/build/date.js"></script>
+  <!-- bootstrap-daterangepicker -->
+  <script src="vendors/moment/min/moment.min.js"></script>
+  <script src="vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+  <!-- Custom Theme Scripts -->
+  <script src="build/js/custom.min.js"></script>
+
+  <!-- Custom My Scripts -->
+  <script src="js/myscript.js"></script>
+
+  <!-- /bootstrap-daterangepicker -->
 </body>
 </html>

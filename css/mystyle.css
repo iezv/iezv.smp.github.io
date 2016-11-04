@@ -1,3 +1,7 @@
+ html { 
+  overflow-x: hidden;
+}
+ 
 img {
   display: inline-block;
   height: auto;
@@ -116,14 +120,16 @@ body{
 /*NAVIGATION*/
 
 .left_col {
-  background: #012931; 
+  background: #012931 !important; 
+  border: 0;
 }
 .nav_menu {
     background: #83DAED;
+    border: 0;
   }
 
 #search {
-  width: 400px;
+  width: 350px;
   border-radius: 0;
   -ms-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
   -o-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
@@ -145,10 +151,22 @@ body{
   width: 60px;
 }
 .search_form {
-  margin-right: 30px;
+  margin-right: 20px;
 }
 #envelope{
-  font-size: 30px;
+  font-size: 27px;
   color: #012931; 
 }
+.message_field,
+.contact_field {
+  font-size: 50px;
+}
+.site_title {
+    background: #012931; 
+    font-size: 20px;
+    border: 0 !important;
+}
+
+
+
 
