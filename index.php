@@ -1,3 +1,9 @@
+<?php 
+error_reporting(0);
+include("php/db_connection.php");
+//include("php/authentic.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +28,13 @@
   <!-- My Style -->
   <link href="css/mystyle.css" rel="stylesheet">
 
+  <!-- Переадрессация на страницу авторизации 
+  <script type="text/javascript">
+    location.replace("login.php");
+  </script> -->
+
+
+
 </head>
 
 <body class="nav-md">
@@ -30,7 +43,7 @@
       <div class="col-md-3 left_col">
         <div class="left_col scroll-view">
           <div class="navbar nav_title" style="border: 0;">
-          <a href="index.html" class="site_title"><i class="fa fa-gg"></i> <span>Your logo</span></a>
+            <a href="index.html" class="site_title"><i class="fa fa-gg"></i> <span>Your logo</span></a>
           </div>
 
           <div class="clearfix"></div>
@@ -110,7 +123,7 @@
                     </a>
                   </li>
                   <li><a href="javascript:;">Help</a></li>
-                  <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  <li><a href="login.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                 </ul>
               </li>
 

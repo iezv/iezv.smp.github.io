@@ -1,3 +1,8 @@
+<?php 
+include("php/db_connection.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +30,16 @@
 	<link href="build/css/custom.css" rel="stylesheet">
 	<!-- My Style -->
 	<link href="css/mystyle.css" rel="stylesheet">
+    
+    <!-- блокироване SUBMIT пока не введены все данные-->
+	<script language="javascript" type="text/javascript">
+		function FoprmSubmit()
+		{  f1.submit();
+			document.getElementById("SubmitButton").disabled = true;
+			return false;
+		}
+	</script>
+	
 </head>
 
 <body class="login">
@@ -36,16 +51,16 @@
 				<div class="login_wrapper">
 					<div class="animate form login_form">
 						<section class="login_content">
-							<form>
+							<form id="f1" action="php/authentic.php" method="post" name="authentic">
 								<h1>Login Form</h1>
 								<div>
-									<input type="text" class="form-control" placeholder="Username" required="" />
+									<input name="username" type="text" class="form-control" placeholder="Username" required="" />
 								</div>
 								<div>
-									<input type="password" class="form-control" placeholder="Password" required="" />
+									<input name="password" type="password" class="form-control" placeholder="Password" required="" />
 								</div>
 								<div class="cen">
-									<a class="btn btn-primary butt" href="index.html">Log in</a>
+									<button type="submit" class="btn btn-primary butt">Log in</button>
 									<a class="reset_pass" href="#">Lost your password?</a>
 								</div>
 								<div class="clearfix"></div>
@@ -64,19 +79,19 @@
 						</div>
 						<div id="register" class="animate form registration_form">
 							<section class="login_content">
-								<form>
+								<form id="f1" action="php/checkin.php" method="post" name="checkin">
 									<h1>Create Account</h1>
 									<div>
-										<input type="text" class="form-control" placeholder="Username" required="" />
+										<input name="username" type="text" class="form-control" placeholder="Username" required="" />
 									</div>
 									<div>
-										<input type="email" class="form-control" placeholder="Email" required="" />
+										<input name="email" type="email" class="form-control" placeholder="Email" required="" />
 									</div>
 									<div>
-										<input type="password" class="form-control" placeholder="Password" required="" />
+										<input name="password" type="password" class="form-control" placeholder="Password" required="" />
 									</div>
 									<div class="text-center">
-										<a class="btn btn-primary butt" href="index.html">Submit</a>
+										<button type="submit" class="btn btn-primary butt">Submit</button>
 									</div>
 									<div class="clearfix"></div>
 									<div class="separator">

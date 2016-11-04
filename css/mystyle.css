@@ -33,9 +33,8 @@ body{
 /*LOGIN PAGE*/
 
 .login {
-  background-image: url(../images/backdrLogin.jpg);
-  background-repeat: no-repeat;
-  background-attachment: scroll;
+  background:
+  url(../images/backdrLogin.jpg) 10% 50% no-repeat #83DAED;;
   background-position: top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
