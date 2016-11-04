@@ -112,11 +112,43 @@ body{
   width: 100%; 
 }
 
-
 /*HOME PAGE*/
 /*NAVIGATION*/
 
 .left_col {
   background: #012931; 
+}
+.nav_menu {
+    background: #83DAED;
+  }
+
+#search {
+  width: 400px;
+  border-radius: 0;
+  -ms-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+  -o-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+  box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+  border: 1px solid #012931;
+}
+
+@media (max-width: 991px) {
+  #search {
+    width: auto;
+  }
+}
+.butt_seach{
+  font-size: 13px !important;
+  text-decoration: none !important;
+  letter-spacing: 0em !important;
+  height: 32px;
+  margin-top: 8px;
+  width: 60px;
+}
+.search_form {
+  margin-right: 30px;
+}
+#envelope{
+  font-size: 30px;
+  color: #012931; 
 }
 

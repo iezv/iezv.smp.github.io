@@ -32,11 +32,6 @@ if(!isset($_SESSION['username']) && (!isset($_SESSION['password']))) {
   <!-- My Style -->
   <link href="css/mystyle.css" rel="stylesheet">
 
-  <!-- Переадрессация на страницу авторизации 
-  <script type="text/javascript">
-    location.replace("login.php");
-  </script> -->
-
 </head>
 
 <body class="nav-md">
@@ -111,6 +106,7 @@ if(!isset($_SESSION['username']) && (!isset($_SESSION['password']))) {
             </div>
 
             <ul class="nav navbar-nav navbar-right">
+
               <li class="">
                 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                   <img src="images/img.jpg" alt=""><?php echo $_SESSION['username']?>
@@ -130,7 +126,7 @@ if(!isset($_SESSION['username']) && (!isset($_SESSION['password']))) {
 
               <li role="presentation" class="dropdown">
                 <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
-                  <i class="fa fa-envelope-o"></i>
+                  <i id="envelope" class="fa fa-envelope-o"></i>
                   <span class="badge bg-green">6</span>
                 </a>
                 <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
@@ -138,7 +134,7 @@ if(!isset($_SESSION['username']) && (!isset($_SESSION['password']))) {
                     <a>
                       <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
                       <span>
-                        <span>John Smith</span>
+                        <span><?php echo $_SESSION['username']?></span>
                         <span class="time">3 mins ago</span>
                       </span>
                       <span class="message">
@@ -150,7 +146,7 @@ if(!isset($_SESSION['username']) && (!isset($_SESSION['password']))) {
                     <a>
                       <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
                       <span>
-                        <span>John Smith</span>
+                        <span><?php echo $_SESSION['username']?></span>
                         <span class="time">3 mins ago</span>
                       </span>
                       <span class="message">
@@ -162,7 +158,7 @@ if(!isset($_SESSION['username']) && (!isset($_SESSION['password']))) {
                     <a>
                       <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
                       <span>
-                        <span>John Smith</span>
+                        <span ><?php echo $_SESSION['username']?></span>
                         <span class="time">3 mins ago</span>
                       </span>
                       <span class="message">
@@ -174,7 +170,7 @@ if(!isset($_SESSION['username']) && (!isset($_SESSION['password']))) {
                     <a>
                       <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
                       <span>
-                        <span>John Smith</span>
+                        <span><?php echo $_SESSION['username']?></span>
                         <span class="time">3 mins ago</span>
                       </span>
                       <span class="message">
@@ -182,6 +178,7 @@ if(!isset($_SESSION['username']) && (!isset($_SESSION['password']))) {
                       </span>
                     </a>
                   </li>
+
                   <li>
                     <div class="text-center">
                       <a>
@@ -192,45 +189,65 @@ if(!isset($_SESSION['username']) && (!isset($_SESSION['password']))) {
                   </li>
                 </ul>
               </li>
+              <li>
+                <div>
+                  <form class="navbar-form navbar-left">
+                    <div class="form-group search_form">
+                      <input id="search" type="text" class="form-control" autocomplete="off" placeholder="search - begin typing text...">
+                      <button type="submit" class="btn btn-primary butt_seach">Go!</button>
+                      <ul class="search_result"></ul>
+                    </div>
+                  </form>
+                </div>
+              </li>
             </ul>
           </nav>
         </div>
       </div>
       <!-- /top navigation -->
-    </div>
-  </div>
+      <div class="conteiner-fluid">
+      <div class="row">
+         <div class="col-lg-6 text-center">ПОЛЕ № 1</div>
+         <div class="col-lg-6 text-center">ПОЛЕ № 2</div>
+       </div>
+     </div>
+   </div>
+ </div>
 
-  <!-- jQuery -->
-  <script src="vendors/jquery/dist/jquery.min.js"></script>
-  <!-- Bootstrap -->
-  <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-  <!-- FastClick -->
-  <script src="vendors/fastclick/lib/fastclick.js"></script>
-  <!-- NProgress -->
-  <script src="vendors/nprogress/nprogress.js"></script>
-  <!-- Chart.js -->
-  <script src="vendors/Chart.js/dist/Chart.min.js"></script>
-  <!-- jQuery Sparklines -->
-  <script src="vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
-  <!-- Flot -->
-  <script src="vendors/Flot/jquery.flot.js"></script>
-  <script src="vendors/Flot/jquery.flot.pie.js"></script>
-  <script src="vendors/Flot/jquery.flot.time.js"></script>
-  <script src="vendors/Flot/jquery.flot.stack.js"></script>
-  <script src="vendors/Flot/jquery.flot.resize.js"></script>
-  <!-- Flot plugins -->
-  <script src="vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-  <script src="vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-  <script src="vendors/flot.curvedlines/curvedLines.js"></script>
-  <!-- DateJS -->
-  <script src="vendors/DateJS/build/date.js"></script>
-  <!-- bootstrap-daterangepicker -->
-  <script src="vendors/moment/min/moment.min.js"></script>
-  <script src="vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+ <!-- jQuery -->
+ <script src="vendors/jquery/dist/jquery.min.js"></script>
+ <!-- Bootstrap -->
+ <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+ <!-- FastClick -->
+ <script src="vendors/fastclick/lib/fastclick.js"></script>
+ <!-- NProgress -->
+ <script src="vendors/nprogress/nprogress.js"></script>
+ <!-- Chart.js -->
+ <script src="vendors/Chart.js/dist/Chart.min.js"></script>
+ <!-- jQuery Sparklines -->
+ <script src="vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+ <!-- Flot -->
+ <script src="vendors/Flot/jquery.flot.js"></script>
+ <script src="vendors/Flot/jquery.flot.pie.js"></script>
+ <script src="vendors/Flot/jquery.flot.time.js"></script>
+ <script src="vendors/Flot/jquery.flot.stack.js"></script>
+ <script src="vendors/Flot/jquery.flot.resize.js"></script>
+ <!-- Flot plugins -->
+ <script src="vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+ <script src="vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+ <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+ <!-- DateJS -->
+ <script src="vendors/DateJS/build/date.js"></script>
+ <!-- bootstrap-daterangepicker -->
+ <script src="vendors/moment/min/moment.min.js"></script>
+ <script src="vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
 
-  <!-- Custom Theme Scripts -->
-  <script src="build/js/custom.min.js"></script>
+ <!-- Custom Theme Scripts -->
+ <script src="build/js/custom.min.js"></script>
 
-  <!-- /bootstrap-daterangepicker -->
+ <!-- Custom My Scripts -->
+ <script src="js/myscript.js"></script>
+
+ <!-- /bootstrap-daterangepicker -->
 </body>
 </html>
