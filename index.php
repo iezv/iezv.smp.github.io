@@ -1,7 +1,11 @@
 <?php 
+
 error_reporting(0);
 include("php/db_connection.php");
-//include("php/authentic.php");
+session_start();
+if(!isset($_SESSION['username']) && (!isset($_SESSION['password']))) {
+  header('location: ../login.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -33,8 +37,6 @@ include("php/db_connection.php");
     location.replace("login.php");
   </script> -->
 
-
-
 </head>
 
 <body class="nav-md">
@@ -64,7 +66,7 @@ include("php/db_connection.php");
           <!-- sidebar menu -->
           <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
             <div class="menu_section">
-              <h3 class="text-center">John Doe</h3>
+              <h3 class="text-center"><?php echo $_SESSION['username']?></h3>
               <ul class="nav side-menu">
                 <li><a><i class="fa fa-home"></i> Home </a></li>
                 <li><a><i class="fa fa-edit"></i> Page 1</a></li>
@@ -111,14 +113,13 @@ include("php/db_connection.php");
             <ul class="nav navbar-nav navbar-right">
               <li class="">
                 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                  <img src="images/img.jpg" alt="">John Doe
+                  <img src="images/img.jpg" alt=""><?php echo $_SESSION['username']?>
                   <span class=" fa fa-angle-down"></span>
                 </a>
                 <ul class="dropdown-menu dropdown-usermenu pull-right">
                   <li><a href="javascript:;"> Profile</a></li>
                   <li>
                     <a href="javascript:;">
-                      <span class="badge bg-red pull-right">50%</span>
                       <span>Settings</span>
                     </a>
                   </li>

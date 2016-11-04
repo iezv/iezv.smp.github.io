@@ -1,52 +1,53 @@
 <?php
 include 'db_connection.php';
 
-	if (isset($_POST['username']))
-	{
-		$username = $_POST['username'];
-		$username = trim($username);
-	}
+if (isset($_POST['username']))
+{
+	$username = $_POST['username'];
+	$username = trim($username);
+}
 
-	if (isset($_POST['email']))
-	{
-		$email=$_POST['email'];
-		$email=trim($email);	
-	}
+if (isset($_POST['email']))
+{
+	$email=$_POST['email'];
+	$email=trim($email);	
+}
 
-	if (isset($_POST['password']))
-	{
-		$password=$_POST['password'];
-		$password=trim($password);
-	}
+if (isset($_POST['password']))
+{
+	$password=$_POST['password'];
+	$password=trim($password);
+}
 
-	$query_n=mysql_query("SELECT * FROM users WHERE username='".$username."'");
-	$numrows_n=mysql_num_rows($query_n);
-	$query_p=mysql_query("SELECT * FROM users WHERE email='".$email."'");
-	$numrows_p=mysql_num_rows($query_p);
+$query=mysql_query("SELECT * FROM users WHERE username='".$username."' OR email='".$email."'");
+$numrows=mysql_num_rows($query);
 
-	if(($numrows_n==0)&&($numrows_p==0)) 
-	{
-		$sql="INSERT INTO users (username, email, password) VALUES ('$username','$email', '$password')";
-		$result=mysql_query($sql);
-		if($result)
-		{
-			$message = "Account Successfully Created";
-			header ('Location: ../index.php');
+if($numrows==0)
+{
+	$sql="INSERT INTO users (username, email, password) VALUES ('$username','$email', '$password')";
+	$result=mysql_query($sql);
+
+	if($result)	{	
+		session_start();
+		$_SESSION ['username'] = $username;
+		$_SESSION['password'] = $password;
+		$_SESSION['password'] = $email;
+		echo '<script type="text/javascript">
+		alert("Account Successfully Created!");
+		location.replace("../index.php");</script>';
 		}
-		else 
-		{
-			$message = "Failed to insert data information!";
-			header ('Location: ../login.php');
-		}
-	}
 	else 
 	{
-		$message = "Username or(and) email is already registered!";
-		header ('Location: ../login.php');
+		echo '<script type="text/javascript">
+		alert("Failed to insert data information!");
+		location.replace("../login.php");</script>';
 	}
+}
+else 
+{
+	echo '<script type="text/javascript">
+	alert("Username or(and) email is already registered!");
+	location.replace("../login.php");</script>';
+}
 
- if (!empty($message)) 
-	{
-		echo "<p class=\"error\">" . "MESSAGE: ". $message . "</p>";
-	}
 ?>
